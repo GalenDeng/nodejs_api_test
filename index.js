@@ -10,7 +10,7 @@ var app = express();
 // 设置服务器监听3000端口
 app.set("port", process.env.PORT || 3000);
 
-// 网站路径重定向到/public文件夹
+// 网站路径重定向到/static文件夹
 app.use(express.static(__dirname + "/static"));
 
 // 使用bodyParser解析请求

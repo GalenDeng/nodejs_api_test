@@ -1,8 +1,11 @@
+var rootDir = __dirname.replace(/[/\\]+handles$/, "");
+
 module.exports = {
 
 	// 主页
 	index: function (req, res) {
-		res.sendFile(__dirname + "/static/index.html");
+		console.log("test");
+		res.sendFile(rootDir + "/static/index.html");
 	}
 
 };

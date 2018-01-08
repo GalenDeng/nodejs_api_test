@@ -18,6 +18,7 @@
   "homepage": "https://github.com/tuziel/nodejs_api_test#readme",
   "dependencies": {
     "body-parser": "^1.18.2",
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "mockjs": "^1.0.1-beta3"
   }
 }

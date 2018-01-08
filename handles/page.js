@@ -1,11 +1,11 @@
-var rootDir = __dirname.replace(/[/\\]+handles$/, "");
+const path = require('path')
+const root = path.resolve(__dirname, '../static/')
 
 module.exports = {
-
 	// 主页
-	index: function (req, res) {
-		console.log("test");
-		res.sendFile(rootDir + "/static/index.html");
-	}
+	index: index
+}
 
-};
+function index(req, res) {
+	res.sendFile(root + '/index.html')
+}

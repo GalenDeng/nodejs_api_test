@@ -1,5 +1,5 @@
 const path = require('path')
-const root = path.resolve(__dirname, '../dist/')
+const root = path.resolve(__dirname, '../static/')
 const mock = require('mockjs')
 const random = mock.Random
 

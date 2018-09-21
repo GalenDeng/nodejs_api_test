@@ -1,4 +1,4 @@
-# 使用nodejs测试前端接口
+# express demo
 
 ## 安装项目
 
@@ -23,5 +23,3 @@ node index.js
 |- package.json  ------------- npm 配置文件
 |- README.md  ---------------- 帮助文档
 ```
-
-已包含示例文件，运行服务即可

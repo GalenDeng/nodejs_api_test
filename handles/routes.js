@@ -1,9 +1,7 @@
-var
-	main = require("./page.js"),
-	api = require("./api.js");
+const main = require('./page.js')
+const api = require('./api.js')
 
 module.exports = function (app) {
-
 	// 访问主页
 	app.get("/", main.index);
 
@@ -12,5 +10,4 @@ module.exports = function (app) {
 
 	// 提交表单
 	app.post("/api/form", api.form);
-
-};
+}

@@ -1,8 +1,11 @@
+const path = require('path')
+const root = path.resolve(__dirname, '../static/')
+
 module.exports = {
-
 	// 主页
-	index: function (req, res) {
-		res.sendFile(__dirname + "/static/index.html");
-	}
+	index: index
+}
 
-};
+function index(req, res) {
+	res.sendFile(root + '/index.html')
+}

@@ -1,4 +1,13 @@
-var random = require("../lib/random.js");
+const path = require('path')
+const root = path.resolve(__dirname, '../static/')
+const mock = require('mockjs')
+const random = mock.Random
+
+module.exports = {
+	// 测试
+	data: data,
+	form: form
+}
 
 // 获取数据
 function data(req, res) {
@@ -8,8 +17,8 @@ function data(req, res) {
 
 	// 生成随机数据
 	var data = {
-		id: random.number(10000),
-		name: random.string(null, 16)
+		id: random.integer(0, 10000),
+		name: random.cword('0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', 16)
 	}
 
 	// 输出get请求头参数
@@ -30,7 +39,7 @@ function form(req, res) {
 	var data = req.body;
 
 	// 生成随机状态码
-	var randomCode = random.element([20000, 20001, 40000]);
+	var randomCode = random.pick([20000, 20001, 40000]);
 
 	// 输出post请求正文
 	console.log("data: ", data);
@@ -43,8 +52,3 @@ function form(req, res) {
 		}
 	});
 }
-
-module.exports = {
-	data: data,
-	form: form
-};
